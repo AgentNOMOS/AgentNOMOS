@@ -24,8 +24,16 @@ NOMOS is not another chatbot or agent framework. It evaluates identity, authorit
 
 ## Install the public OpenClaw skill
 
+Install the official ClawHub CLI:
+
 ```bash
-openclaw skills install @agentnomos/agentnomos-governance-preflight
+npm i -g clawhub
+```
+
+Then install the AgentNOMOS skill:
+
+```bash
+clawhub install @agentnomos/agentnomos-governance-preflight
 ```
 
 The current public skill is read-only and advisory. It never executes the proposed action.
