@@ -36,6 +36,18 @@ AI agents are moving from text generation to real actions. AgentNOMOS focuses on
 
 ---
 
+## Live paid capability — verify it yourself
+
+Since 2026-08-10 one paid capability is live end-to-end:
+
+- `POST https://tooloracle.io/v2/nomos_full_chain_verification` — $0.001 USDC via x402, settled on Base Mainnet (`eip155:8453`)
+- Every execution is bound from represented intent through authorization to an **Ed25519-signed receipt** and outcome
+- **Free offline verification** — no wallet needed: reference evidence (a real production ALLOW and a real production DENY) plus a stateless 21-check verifier are published at [agentnomos.com/proof/full-chain](https://agentnomos.com/proof/full-chain/verify.md), indexed at [`/.well-known/nomos-reproducibility.json`](https://agentnomos.com/.well-known/nomos-reproducibility.json)
+
+Boundary, stated plainly: NOMOS proves continuity from the represented intent onward. It does not prove that the represented intent was the correct interpretation of the human's underlying meaning.
+
+---
+
 ## MCP Server
 
 ```json
@@ -63,6 +75,6 @@ AI agents are moving from text generation to real actions. AgentNOMOS focuses on
 
 ---
 
-> Real payment, wallet signing, settlement, and autonomous execution are not publicly enabled.
+> Inbound x402 settlement is live on the one paid capability above. NOMOS holds **no autonomous outbound-wallet authority**: it never spends, signs or holds caller funds. The MCP surface is metadata only — payment happens exclusively on the x402 HTTP route.
 
 Website: https://agentnomos.com
